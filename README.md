@@ -18,14 +18,14 @@ and secure backend systems to provide a complete healthcare ecosystem.
 
 ## Repository Structure
 
-- apna-sehat/
--│
--├── frontend/
--├── backend/
--├── ml/
--├── nlp/
--├── testing/
--└── docs/
+-  apna-sehat/
+- │
+- ├── frontend/
+- ├── backend/
+- ├── ml/
+- ├── nlp/
+- ├── testing/
+- └── docs/
 
 
 
