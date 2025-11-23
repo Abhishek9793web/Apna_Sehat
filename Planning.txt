@@ -97,3 +97,82 @@ apna-sehat-frontend/
 ├── .env
 ├── package.json
 └── README.md
+
+
+
+system design
+
+                           ┌───────────────────────────────┐
+                           │        Users (Patients)        │
+                           │  - Symptom input               │
+                           │  - Report upload               │
+                           │  - Multilingual UI             │
+                           └───────────────┬───────────────┘
+                                           │
+                                           │
+                           ┌───────────────▼───────────────┐
+                           │        Frontend Layer          │
+                           │    React / Flutter App         │
+                           │  - UI/UX                       │
+                           │  - Language switcher           │
+                           │  - Form validation             │
+                           └───────┬───────────┬───────────┘
+                                   │           │
+            ┌──────────────────────┘           └────────────────────────┐
+            │                                                           │
+            ▼                                                           ▼
+┌──────────────────────┐                                  ┌──────────────────────┐
+│  Authentication API   │                                  │ Real-Time API        │
+│  (Login/Signup/Auth)  │                                  │ (Chat, Video, Calls) │
+└───────────┬──────────┘                                  └──────────┬──────────┘
+            │                                                           │
+            ▼                                                           ▼
+      ┌───────────────────────────────────────────────────────────────────────────┐
+      │                             Backend Layer (API)                            │
+      │                        Node.js + Express / Flask                           │
+      │  ┌────────────────────────┬────────────────────────────┬──────────────────┐│
+      │  │       Routing          │     Business Logic         │  Access Control  ││
+      │  │  (REST Endpoints)      │  (Handling workflows)      │  (JWT/OAuth2)    ││
+      │  └────────────────────────┴────────────────────────────┴──────────────────┘│
+      └───────────────────────┬────────────────────────────────────────────────────┘
+                              │
+                              │
+                 ┌────────────▼─────────────┐
+                 │   AI Diagnosis Engine     │
+                 │ PyTorch (Cloud) + TFLite  │
+                 │ ───────────────────────── │
+                 │  • Symptom extraction     │
+                 │  • Data preprocessing     │
+                 │  • Condition prediction   │
+                 │  • Severity scoring       │
+                 └────────────┬─────────────┘
+                              │
+                              ▼
+                 ┌────────────────────────────┐
+                 │  Decision Engine (Rules)   │
+                 │ ───────────────────────────│
+                 │  • Green Zone  (Low risk)  │
+                 │  • Yellow Zone (Moderate)  │
+                 │  • Red Zone    (High risk) │
+                 └────────────┬──────────────┘
+                              │
+                              ▼
+              ┌────────────────────────────────────┐
+              │   Encrypted Database (MongoDB)      │
+              │ ─────────────────────────────────── │
+              │  • User Profiles                    │
+              │  • Symptoms & Reports               │
+              │  • AI Outcomes                      │
+              │  • Appointments                     │
+              │  • Doctor Records                   │
+              └───────────────────┬────────────────┘
+                                  │
+                                  ▼
+                     ┌───────────────────────────────┐
+                     │   Cloud & DevOps Layer        │
+                     │ ───────────────────────────── │
+                     │  • MongoDB Atlas              │
+                     │  • CI/CD (GitHub Actions)     │
+                     │  • Dockerized microservices   │
+                     │  • AWS / GCP Deployed APIs    │
+                     └───────────────────────────────┘
