@@ -1,0 +1,31 @@
+messages:
+  - role: system
+    content: 'You are a helpful assistant  that break task and assign task  daily  '
+  - role: user
+    content: >2
+         Apna Sehat is an AI-powered health assistance platform designed to help users
+      access medical insights, blood transfusion recommendations, digital
+      reports,
+
+      hospital locators, and emergency support. This project integrates NLP, ML,
+
+      and secure backend systems to provide a complete healthcare ecosystem.
+
+
+      ## Team Members (6 Members)
+
+      1. Abhishek – Frontend (React)
+
+      2. Anuj – Backend (API/DB)
+
+      3. Aditya – UI/UX
+
+      4. Sidharth – ML Model
+
+      5. Ojas – NLP Extraction
+
+      6. Dhruv – Testing
+
+
+      your task are to manage the team 
+model: openai/gpt-4o
