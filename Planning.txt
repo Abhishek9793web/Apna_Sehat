@@ -1,0 +1,99 @@
+ApnaSehat
+
+Folder Structure
+
+
+
+apna-sehat-frontend/
+│
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── assets/
+│       ├── images/
+│       └── icons/
+│
+├── src/
+│   ├── api/
+│   │   ├── axiosConfig.js
+│   │   └── userApi.js
+│   │   └── doctorApi.js
+│   │   └── aiApi.js
+│
+│   ├── assets/
+│   │   ├── images/
+│   │   ├── icons/
+│   │   └── translations/     
+│   │       ├── en.json
+│   │       ├── hi.json
+│   │       └── bn.json
+│
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Sidebar.jsx
+│   │   │   ├── Loader.jsx
+│   │   │   └── LanguageSelector.jsx
+│   │   ├── patient/
+│   │   │   ├── PatientCard.jsx
+│   │   │   ├── SymptomsForm.jsx
+│   │   │   └── UploadReports.jsx
+│   │   ├── doctor/
+│   │   │   ├── DoctorCard.jsx
+│   │   │   └── AppointmentList.jsx
+│
+│   ├── context/
+│   │   ├── AuthContext.jsx
+│   │   ├── LanguageContext.jsx
+│   │   └── ThemeContext.jsx
+│
+│   ├── hooks/
+│   │   ├── useAuth.js
+│   │   ├── useFetch.js
+│   │   └── useLanguage.js
+│
+│   ├── layouts/
+│   │   ├── MainLayout.jsx
+│   │   └── AuthLayout.jsx
+│
+│   ├── pages/
+│   │   ├── Home/
+│   │   │   └── Home.jsx
+│   │   ├── Auth/
+│   │   │   ├── Login.jsx
+│   │   │   └── Register.jsx
+│   │   ├── Patient/
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── SymptomChecker.jsx
+│   │   │   ├── Reports.jsx
+│   │   │   └── RiskResult.jsx
+│   │   ├── Doctor/
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Appointments.jsx
+│   │   │   └── PatientDetails.jsx
+│   │   └── Error/
+│   │       └── NotFound.jsx
+│
+│   ├── services/
+│   │   ├── aiService.js
+│   │   ├── authService.js
+│   │   └── translationService.js
+│
+│   ├── styles/
+│   │   ├── global.css
+│   │   └── components/
+│   │       ├── navbar.css
+│   │       └── sidebar.css
+│
+│   ├── utils/
+│   │   ├── helpers.js
+│   │   ├── constants.js
+│   │   └── validators.js
+│
+│   ├── App.js
+│   ├── index.js
+│   └── router.js
+│
+├── .env
+├── package.json
+└── README.md
