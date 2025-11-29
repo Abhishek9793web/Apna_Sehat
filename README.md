@@ -30,15 +30,15 @@ and secure backend systems to provide a complete healthcare ecosystem.
 ## System Design  
 
 
---                         ┌───────────────────────────────┐
---                         │        Users (Patients)        │
---                         │  - Symptom input               │
---                         │  - Report upload               │
---                         │  - Multilingual UI             │
---                         └───────────────┬───────────────┘
---                                         │
---                                         │
---                         ┌───────────────▼───────────────┐
+-                         ┌───────────────────────────────┐
+-                         │        Users (Patients)        │
+-                         │  - Symptom input               │
+-                         │  - Report upload               │
+-                         │  - Multilingual UI             │
+-                         └───────────────┬───────────────┘
+-                                         │
+-                                         │
+-                          ┌───────────────▼───────────────┐
                            │        Frontend Layer          │
                            │    React / Flutter App         │
                            │  - UI/UX                       │
